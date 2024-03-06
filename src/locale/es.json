@@ -1,0 +1,23 @@
+{
+    "api": {
+        "errorNetworkError": "No se ha podido realizar la consulta de los datos"
+    },
+    "app": {
+        "textWelcome": "Bienvenido a la app"
+    },
+    "errors": {
+        "error404": "Página no encontrada",
+        "error500": "Error interno del servidor",
+        "errorForbidden": "Prohibido",
+        "errorNetworkError": "Error de red",
+        "errorUnauthorized": "No autorizado",
+        "errorUnexpected": "Error inesperado",
+        "errorUnknown": "Error desconocido"
+    },
+    "footer": {
+        "textCopyright": "Todos los derechos reservados"
+    },
+    "buttons": {
+        "buttonHome": "Ir al inicio"
+    }
+}

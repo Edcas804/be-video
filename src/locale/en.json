@@ -1,0 +1,23 @@
+{
+    "api": {
+        "errorNetworkError": "Unable to retrieve data"
+    },
+    "app": {
+        "textWelcome": "Welcome to the app"
+    },
+    "errors": {
+        "error404": "Page not found",
+        "error500": "Internal server error",
+        "errorForbidden": "Forbidden",
+        "errorNetworkError": "Network error",
+        "errorUnauthorized": "Unauthorized",
+        "errorUnexpected": "Unexpected error",
+        "errorUnknown": "Unknown error"
+    },
+    "footer": {
+        "textCopyright": "All rights reserved"
+    },
+    "buttons": {
+        "buttonHome": "Home"
+    }
+}

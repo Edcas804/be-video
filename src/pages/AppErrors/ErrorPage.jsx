@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next"
 import { NavLink, useRouteError } from "react-router-dom"
 import logo from "../../assets/logo.png"
 import { APP } from "../../config"
 const ErrorPage = () => {
     const error = useRouteError()
+    const { t } = useTranslation()
 
     return (
         <>
@@ -19,9 +21,7 @@ const ErrorPage = () => {
                                 </i>
                             </strong>
                         ) : (
-                            <strong>
-                                400 | Error inesperado, intentar nuevamente.
-                            </strong>
+                            <strong>404 | {t("errors.errorUnexpected")}</strong>
                         )}
                     </p>
 
@@ -29,7 +29,7 @@ const ErrorPage = () => {
                         to={"/"}
                         className="border-2 border-brand-1 text-brand-1 hover:text-brand-2 py-2 px-3 rounded-lg font-bold"
                     >
-                        Ir al inicio
+                        {t("buttons.buttonHome")}
                     </NavLink>
                 </div>
             </section>
