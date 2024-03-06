@@ -5,6 +5,9 @@
     "app": {
         "textWelcome": "Bienvenido a la app"
     },
+    "buttons": {
+        "buttonHome": "Ir al inicio"
+    },
     "errors": {
         "error404": "Página no encontrada",
         "error500": "Error interno del servidor",
@@ -17,7 +20,11 @@
     "footer": {
         "textCopyright": "Todos los derechos reservados"
     },
-    "buttons": {
-        "buttonHome": "Ir al inicio"
+    "navBar": {
+        "linkLogin": "Iniciar sesión",
+        "linkLogout": "Cerrar sesión",
+        "linkMyList": "Mi lista",
+        "linkProfile": "Perfil",
+        "linkVideos": "Videos"
     }
 }

@@ -1,0 +1,51 @@
+/**
+	Global app styles
+*/
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--white-bg-2);
+    color: var(--dark-color);
+}
+
+.body-bg {
+    background: var(--body-bg);
+}
+li {
+    @apply list-none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--white-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--white-bg-2);
+    border-radius: 6px;
+}
+
+.mainLogo {
+    filter: var(--filter-color);
+}
+
+/**
+Custom toast
+ */
+.Toastify .Toastify__toast {
+    @apply white-bg dark-color rounded-xl border-t-2 border-brand-2 !important;
+
+    & .Toastify__close-button {
+        @apply dark-color;
+    }
+}
+.banner {
+    background: url("https://ddxg45xjpqu58.cloudfront.net/public/b576ab3f-6016-4362-a9c1-2d50f6c6667a");
+    z-index: -1;
+    background-attachment: fixed;
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+}
