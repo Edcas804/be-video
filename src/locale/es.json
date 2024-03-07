@@ -3,7 +3,11 @@
         "errorNetworkError": "No se ha podido realizar la consulta de los datos"
     },
     "app": {
-        "textWelcome": "Bienvenido a la app"
+        "textWelcome": "Bienvenido a la app",
+        "textCategories": "Categorías"
+    },
+    "buttons": {
+        "buttonHome": "Ir al inicio"
     },
     "errors": {
         "error404": "Página no encontrada",
@@ -17,7 +21,11 @@
     "footer": {
         "textCopyright": "Todos los derechos reservados"
     },
-    "buttons": {
-        "buttonHome": "Ir al inicio"
+    "navBar": {
+        "linkLogin": "Iniciar sesión",
+        "linkLogout": "Cerrar sesión",
+        "linkMyList": "Mi lista",
+        "linkProfile": "Perfil",
+        "linkVideos": "Videos"
     }
 }

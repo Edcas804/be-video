@@ -1,0 +1,34 @@
+/**
+    Custom global class
+*/
+.white-color {
+    color: var(--white-color);
+}
+
+.white-color-2 {
+    color: var(--white-color-2);
+}
+
+.dark-color {
+    color: var(--dark-color);
+}
+
+.dark-color-2 {
+    color: var(--dark-color-2);
+}
+
+.white-bg {
+    background: var(--white-bg);
+}
+
+.white-bg-2 {
+    background: var(--white-bg-2);
+}
+
+.dark-bg {
+    background: var(--dark-bg);
+}
+
+.dark-bg-2 {
+    background: var(--dark-bg-2);
+}

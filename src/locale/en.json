@@ -3,7 +3,11 @@
         "errorNetworkError": "Unable to retrieve data"
     },
     "app": {
-        "textWelcome": "Welcome to the app"
+        "textWelcome": "Welcome to the app",
+        "textCategories": "Categories"
+    },
+    "buttons": {
+        "buttonHome": "Home"
     },
     "errors": {
         "error404": "Page not found",
@@ -17,7 +21,11 @@
     "footer": {
         "textCopyright": "All rights reserved"
     },
-    "buttons": {
-        "buttonHome": "Home"
+    "navBar": {
+        "linkLogin": "Login",
+        "linkLogout": "Logout",
+        "linkMyList": "My list",
+        "linkProfile": "Profile",
+        "linkVideos": "Videos"
     }
 }

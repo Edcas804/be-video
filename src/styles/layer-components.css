@@ -1,0 +1,40 @@
+/**
+   Light color schema by default
+ */
+@layer components {
+    /*
+    html:has(#color-scheme-light:checked) {
+     */
+    :where(html) {
+        --body-bg: linear-gradient(to right, #56565a, #dcdbdb);
+        --white-color: theme(colors.gray.300);
+        --white-color-2: theme(colors.gray.300);
+        --dark-color: theme(colors.slate.900);
+        --dark-color-2: theme(colors.slate.500);
+        --white-bg: linear-gradient(to right, #ececec, #f1f1f1);
+        --white-bg-2: theme(colors.gray.200);
+        --dark-bg: theme(colors.slate.800);
+        --dark-bg-2: theme(colors.slate.900);
+        --filter-color: none;
+    }
+}
+/**
+    Dark theme schema
+ */
+@layer components {
+    /*
+    html:has(#color-scheme-dark:checked) {
+     */
+    html:has(#themeSelector:checked) {
+        --body-bg: linear-gradient(to right, #151527, #172032);
+        --white-color: theme(colors.slate.800);
+        --white-color-2: theme(colors.slate.900);
+        --dark-color: theme(colors.gray.300);
+        --dark-color-2: theme(colors.gray.400);
+        --white-bg: linear-gradient(to bottom right, #172032, #172032, #151527);
+        --white-bg-2: theme(colors.slate.900);
+        --dark-bg: theme(colors.white);
+        --dark-bg-2: theme(colors.gray.200);
+        --filter-color: invert(70%);
+    }
+}
