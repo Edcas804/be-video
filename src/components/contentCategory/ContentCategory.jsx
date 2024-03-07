@@ -1,62 +1,41 @@
+import { useEffect, useState } from "react"
 import ContentCategoryCard from "./ContentCategoryCard"
+import useApp from "../../context/AppContext"
+import { getCategories } from "../../services/api"
+import GallerySkeleton from "../skeletons/GallerySkeleton"
 
-const data = [
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        name: "Default",
-        description: "This is the default item",
-        picture:
-            "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    }
-]
 const ContentCategory = () => {
+    const { category } = useApp()
+    const [categories, setCategories] = useState([])
+    const [loading, setLoading] = useState(false)
+    useEffect(() => {
+        if (category) {
+            setLoading(true)
+            setCategories([])
+            getCategories({
+                category: category
+            })
+                .then((res) => {
+                    setCategories(res)
+                    setLoading(false)
+                })
+                .finally(() => {
+                    setLoading(false)
+                })
+        }
+    }, [category])
     return (
-        <div className="w-full grid grid-cols-5 gap-3">
-            {data.map((item, index) => {
-                return <ContentCategoryCard key={index} item={item} />
-            })}
-        </div>
+        <>
+            {loading ? (
+                <GallerySkeleton />
+            ) : (
+                <div className="w-full grid grid-cols-5 xl:grid-cols-8 gap-3 p-3">
+                    {categories.map((item, index) => {
+                        return <ContentCategoryCard key={index} item={item} />
+                    })}
+                </div>
+            )}
+        </>
     )
 }
 

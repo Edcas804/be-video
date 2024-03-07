@@ -13,7 +13,7 @@ const hash = md5(ts + API_MARVEL_PRIVATE_KEY + API_MARVEL_PUBLIC_KEY)
 
 export async function getCategories({
     category,
-    limit = 10,
+    limit = 100,
     page = 1,
     orderBy = ""
 }) {

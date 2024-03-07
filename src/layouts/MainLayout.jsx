@@ -7,7 +7,7 @@ const Layout = () => {
     return (
         <div className="main-layout">
             <Header />
-            <main className="flex justify-center items-center p-3">
+            <main className="flex justify-center items-center">
                 <Outlet />
                 <ToastContainer position="bottom-right" theme="dark" />
             </main>

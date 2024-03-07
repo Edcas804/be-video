@@ -3,30 +3,30 @@
         "name": "Comics",
         "endpoint": "comics",
         "description": "Comics",
-        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+        "picture": "http://i.annihil.us/u/prod/marvel/i/mg/8/f0/51c9ed1304bb7.jpg"
     },
     {
         "name": "Characters",
         "endpoint": "characters",
         "description": "Characters",
-        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+        "picture": "http://i.annihil.us/u/prod/marvel/i/mg/9/d0/53f77ba25db97.jpg"
     },
     {
         "name": "Events",
         "endpoint": "events",
         "description": "Events",
-        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
-    },
-    {
-        "name": "Stories",
-        "endpoint": "stories",
-        "description": "Stories",
-        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+        "picture": "http://i.annihil.us/u/prod/marvel/i/mg/a/00/57e94a282c8de.jpg"
     },
     {
         "name": "Series",
         "endpoint": "series",
         "description": "Series",
-        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+        "picture": "http://i.annihil.us/u/prod/marvel/i/mg/c/80/51c9ec5e90de1.jpg"
+    },
+    {
+        "name": "Stories",
+        "endpoint": "stories",
+        "description": "Stories",
+        "picture": "http://i.annihil.us/u/prod/marvel/i/mg/9/d0/58b5cfb6d5239.jpg"
     }
 ]

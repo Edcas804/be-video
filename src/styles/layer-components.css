@@ -6,7 +6,7 @@
     html:has(#color-scheme-light:checked) {
      */
     :where(html) {
-        --body-bg: linear-gradient(to right, #e8e8e8, #dcdbdb);
+        --body-bg: linear-gradient(to right, #56565a, #dcdbdb);
         --white-color: theme(colors.gray.300);
         --white-color-2: theme(colors.gray.300);
         --dark-color: theme(colors.slate.900);
