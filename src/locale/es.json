@@ -3,7 +3,8 @@
         "errorNetworkError": "No se ha podido realizar la consulta de los datos"
     },
     "app": {
-        "textWelcome": "Bienvenido a la app"
+        "textWelcome": "Bienvenido a la app",
+        "textCategories": "Categorías"
     },
     "buttons": {
         "buttonHome": "Ir al inicio"

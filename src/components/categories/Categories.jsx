@@ -1,17 +1,13 @@
-import Category from "./Category"
+import CategoryCard from "./CategoryCard"
+import categories from "../../data/caterories.json"
 
 const Categories = () => {
-    const categories = new Array(5).fill("category")
     return (
-        <>
+        <div className="w-full grid grid-cols-5 gap-3">
             {categories.map((category, index) => {
-                return (
-                    <div key={index} className="category">
-                        <Category />
-                    </div>
-                )
+                return <CategoryCard key={index} category={category} />
             })}
-        </>
+        </div>
     )
 }
 

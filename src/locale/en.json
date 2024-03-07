@@ -3,7 +3,8 @@
         "errorNetworkError": "Unable to retrieve data"
     },
     "app": {
-        "textWelcome": "Welcome to the app"
+        "textWelcome": "Welcome to the app",
+        "textCategories": "Categories"
     },
     "buttons": {
         "buttonHome": "Home"

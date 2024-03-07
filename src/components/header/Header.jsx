@@ -7,7 +7,7 @@ import Language from "./Language"
 const Header = () => {
     const { t } = useTranslation()
     return (
-        <header className="sticky top-0 w-full bg-slate-950/80">
+        <header className="sticky top-0 w-full bg-slate-950/80 z-20">
             <nav className="w-full flex justify-between items-center py-3 px-2 sm:px-4">
                 <ul className="flex justify-center items-center">
                     <NavLink

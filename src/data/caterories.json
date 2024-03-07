@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Comics",
+        "endpoint": "comics",
+        "description": "Comics",
+        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+    },
+    {
+        "name": "Characters",
+        "endpoint": "characters",
+        "description": "Characters",
+        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+    },
+    {
+        "name": "Events",
+        "endpoint": "events",
+        "description": "Events",
+        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+    },
+    {
+        "name": "Stories",
+        "endpoint": "stories",
+        "description": "Stories",
+        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+    },
+    {
+        "name": "Series",
+        "endpoint": "series",
+        "description": "Series",
+        "picture": "https://i.annihil.us/u/prod/marvel/i/mg/9/c0/53176aa9df48d.jpg"
+    }
+]

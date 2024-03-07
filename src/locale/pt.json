@@ -3,7 +3,8 @@
         "errorNetworkError": "Não foi possível obter os dados"
     },
     "app": {
-        "textWelcome": "Bem vindo à aplicação"
+        "textWelcome": "Bem vindo à aplicação",
+        "textCategories": "Categorias"
     },
     "buttons": {
         "buttonHome": "Início"
