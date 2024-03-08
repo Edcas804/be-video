@@ -17,8 +17,8 @@ const loginFormConfig = [
     }
 ]
 const initialLoginForm = {
-    username: "",
-    password: ""
+    username: "bevideuser",
+    password: "BevideoPass1*"
 }
 
 const LoginForm = ({ dataHandler, data = {}, readOnly = false }) => {

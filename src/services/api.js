@@ -18,7 +18,6 @@ export async function getCategories({
 }) {
     const offset = (page - 1) * limit
     const url = `${API_MARVEL_API_URL}${category}?ts=${ts}&apikey=${API_MARVEL_PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}&orderBy=${orderBy}`
-    console.log(url)
     try {
         const response = await fetch(url)
         const data = await response.json()
@@ -29,7 +28,7 @@ export async function getCategories({
         }
     } catch (error) {
         console.log(`Error consultando el api:${url} : `, error)
-        return {}
+        return []
     }
 }
 
@@ -43,7 +42,6 @@ export async function getDetail({
     const offset = (page - 1) * limit
     const idParam = id ? `/${id}` : ``
     const url = `${API_MARVEL_API_URL}${category}${idParam}?ts=${ts}&apikey=${API_MARVEL_PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}&orderBy=${orderBy}`
-    console.log(url)
     try {
         const response = await fetch(url)
         const data = await response.json()
@@ -54,6 +52,6 @@ export async function getDetail({
         }
     } catch (error) {
         console.log(`Error consultando el api:${url} : `, error)
-        return {}
+        return []
     }
 }
