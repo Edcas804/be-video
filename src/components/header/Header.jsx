@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import logo from "../../assets/logo.png"
 import Theme from "./Theme"
 import Language from "./Language"
+import { ArrowRightCircleIcon } from "@heroicons/react/20/solid"
 
 const Header = () => {
     const { t } = useTranslation()
@@ -15,14 +16,16 @@ const Header = () => {
                         className="flex justify-center items-center text-gray-200 hover:sepia py-2 px-3 rounded-lg font-bold"
                     >
                         <img src={logo} className="w-8 h-8 invert" alt="logo" />
-                        <h1 className="text-bold text-xl ml-2">Be Video</h1>
+                        <h1 className="text-bold text-sm md:text-xl ml-2">
+                            Be Video
+                        </h1>
                     </NavLink>
                 </ul>
-                <ul className="flex justify-center items-center">
+                <ul className="flex justify-center items-center uppercase">
                     <li>
                         <NavLink
                             to={"/videos"}
-                            className="text-gray-200 hover:sepia px-3 font-bold"
+                            className="text-xs md:text-sm text-gray-200 hover:sepia px-3 font-bold"
                         >
                             {t("navBar.linkVideos")}
                         </NavLink>
@@ -30,7 +33,7 @@ const Header = () => {
                     <li>
                         <NavLink
                             to={"/my-list"}
-                            className="text-gray-200 hover:sepia px-3 font-bold"
+                            className="text-xs md:text-sm text-gray-200 hover:sepia px-3 font-bold uppercase"
                         >
                             {t("navBar.linkMyList")}
                         </NavLink>
@@ -46,9 +49,12 @@ const Header = () => {
                     <li>
                         <NavLink
                             to={"/login"}
-                            className="dark-color-2 hover:sepia px-3 font-bold"
+                            className="flex items-center dark-color-2 hover:sepia px-3 font-bold"
+                            title={t("navBar.linkLogin")}
                         >
-                            {t("navBar.linkLogin")}
+                            <button>
+                                <ArrowRightCircleIcon className="w-6 text-xl text-slate-400" />
+                            </button>
                         </NavLink>
                     </li>
                 </ul>

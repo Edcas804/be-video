@@ -4,10 +4,17 @@
     },
     "app": {
         "textWelcome": "Bem vindo à aplicação",
-        "textCategories": "Categorias"
+        "textCategories": "Categorias",
+        "textLogin": "Entrar",
+        "textMyList": "Minha lista",
+        "textVideos": "Vídeos"
+    },
+    "toast": {
+        "addedFavorite": "Adicionado aos favoritos"
     },
     "buttons": {
-        "buttonHome": "Início"
+        "buttonHome": "Início",
+        "buttonLogin": "Entrar"
     },
     "errors": {
         "error404": "Página não encontrada",
@@ -24,8 +31,20 @@
     "navBar": {
         "linkLogin": "Entrar",
         "linkLogout": "Sair",
-        "linkMyList": "Minha lista",
+        "linkMyList": "Minha-lista",
         "linkProfile": "Perfil",
         "linkVideos": "Vídeos"
+    },
+    "forms": {
+        "login": {
+            "usernameLabel": "nome de utilizador",
+            "passwordLabel": "palavra-passe"
+        },
+        "errors": {
+            "required": "obrigatório",
+            "minLength": "muito curto",
+            "maxLength": "muito longo",
+            "patternPassword": "deve ter letras, números e caracteres especiais"
+        }
     }
 }

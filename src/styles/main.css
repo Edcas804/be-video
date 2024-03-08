@@ -51,3 +51,12 @@ Custom toast
     background-repeat: no-repeat;
     @apply absolute top-0 left-0 w-full h-full object-cover;
 }
+
+.loginForm {
+    background: url("https://www.xtrafondos.com/wallpapers/resized/hombres-arana-sin-camino-a-casa-11625.jpg?s=large");
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+}

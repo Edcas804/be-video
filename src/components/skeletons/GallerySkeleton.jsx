@@ -1,7 +1,7 @@
 const GallerySkeleton = () => {
     const rows = new Array(20).fill("gallerySkeleton")
     return (
-        <div className="w-full grid grid-cols-5 xl:grid-cols-8 gap-3 text-cyan-950 relative my-2 animate-pulse">
+        <div className="w-full grid grid-cols-2 md:grid-cols-5 xl:grid-cols-8 gap-3 text-cyan-950 relative my-2 animate-pulse p-3">
             {rows.map((row) => (
                 <div
                     key={`${row}-${Math.random()}`}

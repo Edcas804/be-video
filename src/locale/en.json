@@ -4,10 +4,17 @@
     },
     "app": {
         "textWelcome": "Welcome to the app",
-        "textCategories": "Categories"
+        "textCategories": "Categories",
+        "textLogin": "Login",
+        "textMyList": "My list",
+        "textVideos": "Videos"
+    },
+    "toast": {
+        "addedFavorite": "Added to favorites"
     },
     "buttons": {
-        "buttonHome": "Home"
+        "buttonHome": "Home",
+        "buttonLogin": "Login"
     },
     "errors": {
         "error404": "Page not found",
@@ -24,8 +31,20 @@
     "navBar": {
         "linkLogin": "Login",
         "linkLogout": "Logout",
-        "linkMyList": "My list",
+        "linkMyList": "My-List",
         "linkProfile": "Profile",
         "linkVideos": "Videos"
+    },
+    "forms": {
+        "login": {
+            "usernameLabel": "username",
+            "passwordLabel": "password"
+        },
+        "errors": {
+            "required": "required",
+            "minLength": "too short",
+            "maxLength": "too long",
+            "patternPassword": "must have letters, numbers and special characters"
+        }
     }
 }

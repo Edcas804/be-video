@@ -3,17 +3,15 @@ form {
 }
 form select,
 select {
-    color: var(--dark-color);
-    @apply rounded-full px-5 py-1 border border-slate-300 mx-2 bg-transparent;
+    @apply text-white rounded-full px-5 py-1  mx-2 bg-transparent;
 }
 
 form input {
-    color: var(--dark-color-2);
-    @apply rounded-lg px-5 py-2 border border-slate-400 my-2 w-full bg-transparent box-border;
+    @apply text-white rounded-lg px-5 py-2 border border-slate-200 my-2 w-full bg-transparent box-border;
 }
 
 form label {
-    color: var(--dark-color-2);
+    @apply text-white;
 }
 
 form input:focus,
@@ -22,7 +20,7 @@ input:focus {
 }
 
 form button {
-    @apply border-2 border-brand-1 px-3 py-2 rounded-lg hover:bg-brand-2 hover:text-white duration-200 min-w-[100px] font-bold;
+    @apply text-slate-400 border-2 border-slate-300 px-3 py-2 rounded-lg hover:bg-brand-2 hover:text-white duration-200 min-w-[100px] font-bold;
 }
 .showErrors {
     @apply w-5/6 px-2 rounded-lg text-red-800 relative bg-red-300;
