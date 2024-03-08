@@ -6,11 +6,13 @@ import ACTION_TYPES from "../actions/types"
  * @property {string} category
  * @property {string} contentDetails
  * @property {bool} showContentDetails
+ * @property {array} addFavorite
  */
 export const initialState = {
     category: "",
     contentDetails: "",
-    showContentDetails: false
+    showContentDetails: false,
+    addFavorite: []
 }
 const reducerMap = (state, payload) => ({
     [ACTION_TYPES.CATEGORY]: {
@@ -24,6 +26,10 @@ const reducerMap = (state, payload) => ({
     [ACTION_TYPES.SHOW_CONTENT_DETAILS]: {
         ...state,
         showContentDetails: payload
+    },
+    [ACTION_TYPES.ADD_FAVORITE]: {
+        ...state,
+        addFavorite: payload
     }
 })
 

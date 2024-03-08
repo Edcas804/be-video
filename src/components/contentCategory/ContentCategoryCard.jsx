@@ -38,6 +38,7 @@ const ContentCategoryCard = ({ item }) => {
                     }
                     alt={item.name}
                     className="w-full h-full object-cover z-0"
+                    loading="lazy"
                 />
             </div>
         </Card>

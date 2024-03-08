@@ -1,27 +1,40 @@
+import { useTranslation } from "react-i18next"
 import { useEffect, useState } from "react"
 import useApp from "../../context/AppContext"
 import { getDetail } from "../../services/api"
 import { NAMES_MAP } from "../../utils/constants"
 import { XMarkIcon } from "@heroicons/react/20/solid"
 import ACTION_TYPES from "../../actions/types"
+import { PlayCircleIcon, StarIcon } from "@heroicons/react/20/solid"
+import { toast } from "react-toastify"
 
 const ContentDetails = () => {
+    const { t } = useTranslation()
     const { contentDetails, category, showContentDetails, dispatch } = useApp()
     const [content, setContent] = useState({})
+    const { addFavorite } = useApp()
     const showDetails = (show) => {
         dispatch({
             type: ACTION_TYPES.SHOW_CONTENT_DETAILS,
             payload: show
         })
     }
+    const handleFavorite = (item) => {
+        console.log(addFavorite)
+        let favorites = [...addFavorite, item]
+        dispatch({
+            type: ACTION_TYPES.ADD_FAVORITE,
+            payload: favorites
+        })
+        localStorage.setItem("favorites", JSON.stringify(favorites))
+        toast.success(t("toast.addedFavorite"))
+    }
     useEffect(() => {
-        console.log(contentDetails, showContentDetails)
         if (contentDetails && showContentDetails) {
             getDetail({
                 category: category,
                 id: contentDetails
             }).then((res) => {
-                console.log(res[0])
                 Array.isArray(res) && setContent(res[0])
             })
         }
@@ -35,7 +48,7 @@ const ContentDetails = () => {
             <button onClick={() => showDetails(false)}>
                 <XMarkIcon className="text-white w-12 h-12 absolute top-2 right-2 z-50 border-4 border-slate-100 rounded-full hover:sepia hover:bg-slate-400/80" />
             </button>
-            <div className="w-full h-full flex abosolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent hover:brightness-50 p-4 text-white text-center flex-col justify-end items-center gap-2 transition-all duration-300 ease-in-out z-10 relative ">
+            <div className="w-full h-full flex abosolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent p-4 text-white text-center flex-col justify-end items-center gap-2 transition-all duration-300 ease-in-out z-10 relative ">
                 <h3 className="text-lg font-bold uppercase tracking-widest  ">
                     {content[NAMES_MAP[category]] ?? ""}
                 </h3>
@@ -45,6 +58,14 @@ const ContentDetails = () => {
                 <p className="text-sm font-light tracking-widest">
                     {content.modified && content.modified.substring(0, 10)}
                 </p>
+                <div className="flex justify-center items-center gap-2">
+                    <button>
+                        <PlayCircleIcon className="w-14 hover:sepia" />
+                    </button>
+                    <button onClick={() => handleFavorite(content)}>
+                        <StarIcon className="w-14 text-slate-400 hover:text-slate-100" />
+                    </button>
+                </div>
             </div>
 
             <div className="flex w-full h-full absolute top-0">

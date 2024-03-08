@@ -20,13 +20,7 @@ const initialLoginForm = {
     password: ""
 }
 
-const LoginForm = ({
-    dataHandler,
-    data = {},
-    saved = true,
-    isSend = false,
-    readOnly = false
-}) => {
+const LoginForm = ({ dataHandler, data = {}, readOnly = false }) => {
     const { t } = useTranslation()
     const [loginFormValues, setLoginFormValues] = useState(initialLoginForm)
     useEffect(() => {
@@ -60,28 +54,10 @@ const LoginForm = ({
                         ))}
 
                         <div className="col-span-12 flex items-center justify-center py-3 mt-2 border-t border-brand-1">
-                            {isSend && (
-                                <button type="submit" disabled>
-                                    {t("buttonSending")}
-                                    <p className="sending">
-                                        <i className="bi bi-arrow-clockwise"></i>
-                                    </p>
-                                </button>
-                            )}
-                            {!isSend && (
-                                <button
-                                    type="submit"
-                                    disabled={readOnly ?? false}
-                                >
-                                    {t("buttonSave")}
-                                    <i className="bi bi-check2-circle"></i>
-                                </button>
-                            )}
-                            {!saved && (
-                                <div className="showErrors">
-                                    {t("buttonErrorSending")}
-                                </div>
-                            )}
+                            <button type="submit" disabled={readOnly ?? false}>
+                                {t("buttons.buttonLogin")}
+                                <i className="bi bi-check2-circle"></i>
+                            </button>
                         </div>
                     </Form>
                 )}

@@ -5,34 +5,14 @@ import LoginForm from "./LoginForm"
 
 const Login = () => {
     const { t } = useTranslation()
-    const [saved, setSaved] = useState(true)
-    const [isSend, setIsSend] = useState(false)
     const divForm = useRef(null)
     const navigate = useNavigate()
-    //const api = useApi()
     const sendData = (values) => {
-        setIsSend(true)
-
+        console.log("values to login", values)
         navigate("/")
-        /*
-        api.post(`${CONFIG.API.BASE_URL}/product`, values)
-            .then((res) => {
-                if (res.data.status === 200) {
-                    setSaved(true)
-                    divForm.current.firstChild.reset()
-                    toast.success("Se ha guardado el registro")
-                    navigate("/products")
-                } else {
-                    setSaved(false)
-                    setIsSend(false)
-                    toast.error("Error guardando los datos")
-                }
-            })
-            .catch((e) => {
-                setIsSend(false)
-                toast.error(t(`${useApiError(e.message)}`))
-            })
-            */
+        /**
+         * Login with api
+         */
     }
     return (
         <section className="w-full h-screen flex justify-center items-center loginForm">
@@ -47,11 +27,7 @@ const Login = () => {
                     >
                         {t("app.textLogin")}
                     </h3>
-                    <LoginForm
-                        dataHandler={sendData}
-                        saved={saved}
-                        isSend={isSend}
-                    />
+                    <LoginForm dataHandler={sendData} />
                 </div>
             </div>
         </section>

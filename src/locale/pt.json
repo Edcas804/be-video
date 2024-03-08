@@ -5,10 +5,16 @@
     "app": {
         "textWelcome": "Bem vindo à aplicação",
         "textCategories": "Categorias",
-        "textLogin": "Entrar"
+        "textLogin": "Entrar",
+        "textMyList": "Minha lista",
+        "textVideos": "Vídeos"
+    },
+    "toast": {
+        "addedFavorite": "Adicionado aos favoritos"
     },
     "buttons": {
-        "buttonHome": "Início"
+        "buttonHome": "Início",
+        "buttonLogin": "Entrar"
     },
     "errors": {
         "error404": "Página não encontrada",
@@ -25,7 +31,7 @@
     "navBar": {
         "linkLogin": "Entrar",
         "linkLogout": "Sair",
-        "linkMyList": "Minha lista",
+        "linkMyList": "Minha-lista",
         "linkProfile": "Perfil",
         "linkVideos": "Vídeos"
     },

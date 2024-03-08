@@ -5,12 +5,12 @@ import { getCategories } from "../../services/api"
 import GallerySkeleton from "../skeletons/GallerySkeleton"
 import ContentDetails from "../contentDetails/ContentDetails"
 
-const ContentCategory = () => {
+const ContentCategory = ({ favorites = false }) => {
     const { category } = useApp()
     const [categories, setCategories] = useState([])
     const [loading, setLoading] = useState(false)
     useEffect(() => {
-        if (category) {
+        if (category && !favorites) {
             setLoading(true)
             setCategories([])
             getCategories({
@@ -23,6 +23,10 @@ const ContentCategory = () => {
                 .finally(() => {
                     setLoading(false)
                 })
+        }
+        if (favorites) {
+            let favorites = JSON.parse(localStorage.getItem("favorites"))
+            setCategories(favorites)
         }
     }, [category])
     return (
