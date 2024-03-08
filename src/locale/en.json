@@ -10,7 +10,8 @@
         "textVideos": "Videos"
     },
     "toast": {
-        "addedFavorite": "Added to favorites"
+        "addedFavorite": "Added to favorites",
+        "noData": "No data"
     },
     "buttons": {
         "buttonHome": "Home",

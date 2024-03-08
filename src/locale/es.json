@@ -10,7 +10,8 @@
         "textVideos": "Videos"
     },
     "toast": {
-        "addedFavorite": "Añadido a favoritos"
+        "addedFavorite": "Añadido a favoritos",
+        "noData": "No se han encontrado registros"
     },
     "buttons": {
         "buttonHome": "Ir al inicio",

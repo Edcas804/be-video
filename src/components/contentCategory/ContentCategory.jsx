@@ -5,8 +5,11 @@ import useApp from "../../context/AppContext"
 import { getCategories } from "../../services/api"
 import GallerySkeleton from "../skeletons/GallerySkeleton"
 import ContentDetails from "../contentDetails/ContentDetails"
+import { toast } from "react-toastify"
+import { useTranslation } from "react-i18next"
 
 const ContentCategory = ({ favorites = false }) => {
+    const { t } = useTranslation()
     const { category } = useApp()
     const [categories, setCategories] = useState([])
     const [loading, setLoading] = useState(false)
@@ -15,18 +18,23 @@ const ContentCategory = ({ favorites = false }) => {
             setLoading(true)
             setCategories([])
             getCategories({
-                category: category
+                category: category,
+                limit: 30
             })
                 .then((res) => {
                     if (Array.isArray(res) && res.length > 0) {
                         setCategories(res)
                         setLoading(false)
+                    } else {
+                        toast.warn(t("toast.noData"))
                     }
                 })
                 .finally(() => {
                     setLoading(false)
                 })
         }
+    }, [category])
+    useEffect(() => {
         if (favorites) {
             let favorites = JSON.parse(localStorage.getItem("favorites"))
 
@@ -34,7 +42,7 @@ const ContentCategory = ({ favorites = false }) => {
                 setCategories(favorites)
             }
         }
-    }, [category])
+    }, [favorites])
     return (
         <>
             {loading ? (

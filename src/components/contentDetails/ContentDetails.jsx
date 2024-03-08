@@ -35,7 +35,11 @@ const ContentDetails = () => {
                 category: category,
                 id: contentDetails
             }).then((res) => {
-                Array.isArray(res) && setContent(res[0])
+                if (Array.isArray(res) && res.length > 0) {
+                    setContent(res[0])
+                } else {
+                    toast.warn(t("toast.noData"))
+                }
             })
         }
     }, [contentDetails, showContentDetails])
@@ -50,7 +54,7 @@ const ContentDetails = () => {
             </button>
             <div className="w-full h-full flex abosolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black to-transparent p-4 text-white text-center flex-col justify-end items-center gap-2 transition-all duration-300 ease-in-out z-10 relative ">
                 <h3 className="text-lg font-bold uppercase tracking-widest  ">
-                    {content[NAMES_MAP[category]] ?? ""}
+                    {content[NAMES_MAP[category]] || ""}
                 </h3>
                 <p className="text-sm tracking-widest  ">
                     {content.description ?? ""}
