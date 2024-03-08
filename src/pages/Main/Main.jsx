@@ -9,7 +9,7 @@ const Main = () => {
     const { category } = useApp()
     return (
         <article className="w-full">
-            <div className="flex flex-col justify-end items-center pb-30 md:pb-40 xl:pb-60 gap-4 w-full flex-wrap hover:cursor-pointer min-h-screen  bg-slate-900/60">
+            <div className="flex flex-col justify-end items-center pb-10 md:pb-40 xl:pb-40 gap-4 w-full flex-wrap hover:cursor-pointer bg-gradient-to-b from-black to-transparent">
                 <div className="banner"></div>
                 <Title title={t("app.textCategories")} />
                 <Home />

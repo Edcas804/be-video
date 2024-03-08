@@ -10,6 +10,7 @@ const CategoryCard = ({ data = dataDefault }) => {
     const { dispatch } = useApp()
     const handledata = (data) => () => {
         dispatch({ type: ACTION_TYPES.CATEGORY, payload: data.endpoint })
+        dispatch({ type: ACTION_TYPES.SHOW_CONTENT_DETAILS, payload: false })
         localStorage.setItem("category", data.endpoint)
     }
     return (

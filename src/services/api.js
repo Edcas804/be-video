@@ -33,6 +33,31 @@ export async function getCategories({
         return {}
     }
 }
+
+export async function getDetail({
+    category,
+    id,
+    limit = 100,
+    page = 1,
+    orderBy = ""
+}) {
+    const offset = (page - 1) * limit
+    const idParam = id ? `/${id}` : ``
+    const url = `${API_MARVEL_API_URL}${category}${idParam}?ts=${ts}&apikey=${API_MARVEL_PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}&orderBy=${orderBy}`
+    console.log(url)
+    try {
+        const response = await fetch(url)
+        const data = await response.json()
+        if (data.code === 200) {
+            return data.data.results
+        } else {
+            return []
+        }
+    } catch (error) {
+        console.log(`Error consultando el api:${url} : `, error)
+        return {}
+    }
+}
 export async function getCharacters({ limit = 100, page = 1, orderBy = "" }) {
     const offset = (page - 1) * limit
     const url = `${API_MARVEL_API_URL}${API_URL_CHARACTERS}?ts=${ts}&apikey=${API_MARVEL_PUBLIC_KEY}&hash=${hash}&limit=${limit}&offset=${offset}&orderBy=${orderBy}`

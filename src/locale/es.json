@@ -4,7 +4,8 @@
     },
     "app": {
         "textWelcome": "Bienvenido a la app",
-        "textCategories": "Categorías"
+        "textCategories": "Categorías",
+        "textLogin": "Iniciar sesión"
     },
     "buttons": {
         "buttonHome": "Ir al inicio"
@@ -27,5 +28,17 @@
         "linkMyList": "Mi lista",
         "linkProfile": "Perfil",
         "linkVideos": "Videos"
+    },
+    "forms": {
+        "login": {
+            "usernameLabel": "usuario",
+            "passwordLabel": "contraseña"
+        },
+        "errors": {
+            "required": "requerido",
+            "minLength": "muy corto",
+            "maxLength": "demasiado largo",
+            "patternPassword": "debe tener letras, números y caracteres especiales"
+        }
     }
 }
