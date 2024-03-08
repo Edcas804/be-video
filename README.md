@@ -1,5 +1,7 @@
 # Be Video
 
+[Be Video](https://dx1ovprn4e6yl.cloudfront.net/login)
+
 ### 📦 INSTALLATION
 
 -   Node >= 18
