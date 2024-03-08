@@ -18,8 +18,10 @@ const ContentCategory = ({ favorites = false }) => {
                 category: category
             })
                 .then((res) => {
-                    setCategories(res)
-                    setLoading(false)
+                    if (Array.isArray(res) && res.length > 0) {
+                        setCategories(res)
+                        setLoading(false)
+                    }
                 })
                 .finally(() => {
                     setLoading(false)
@@ -27,7 +29,10 @@ const ContentCategory = ({ favorites = false }) => {
         }
         if (favorites) {
             let favorites = JSON.parse(localStorage.getItem("favorites"))
-            setCategories(favorites)
+
+            if (Array.isArray(favorites) && favorites.length > 0) {
+                setCategories(favorites)
+            }
         }
     }, [category])
     return (
@@ -47,6 +52,6 @@ const ContentCategory = ({ favorites = false }) => {
 }
 
 ContentCategory.propTypes = {
-    favorites: PropTypes.bool.isRequired
+    favorites: PropTypes.bool
 }
 export default ContentCategory
