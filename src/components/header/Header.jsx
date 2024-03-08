@@ -3,10 +3,7 @@ import { useTranslation } from "react-i18next"
 import logo from "../../assets/logo.png"
 import Theme from "./Theme"
 import Language from "./Language"
-import {
-    ArrowLongRightIcon,
-    ArrowRightCircleIcon
-} from "@heroicons/react/20/solid"
+import { ArrowRightCircleIcon } from "@heroicons/react/20/solid"
 
 const Header = () => {
     const { t } = useTranslation()

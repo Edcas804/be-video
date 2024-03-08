@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types"
 import { Field, Form, Formik } from "formik"
 import { useEffect, useState } from "react"
 import { LoginFormSchema } from "./loginSchema"
@@ -66,4 +67,9 @@ const LoginForm = ({ dataHandler, data = {}, readOnly = false }) => {
     )
 }
 
+LoginForm.propTypes = {
+    dataHandler: PropTypes.func,
+    data: PropTypes.object,
+    readOnly: PropTypes.bool
+}
 export default LoginForm

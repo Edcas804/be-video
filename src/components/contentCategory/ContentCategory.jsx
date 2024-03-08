@@ -1,3 +1,4 @@
+import { PropTypes } from "prop-types"
 import { useEffect, useState } from "react"
 import ContentCategoryCard from "./ContentCategoryCard"
 import useApp from "../../context/AppContext"
@@ -45,4 +46,7 @@ const ContentCategory = ({ favorites = false }) => {
     )
 }
 
+ContentCategory.propTypes = {
+    favorites: PropTypes.bool.isRequired
+}
 export default ContentCategory
